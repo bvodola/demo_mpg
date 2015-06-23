@@ -1,0 +1,206 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<title>Quatro Corretora - Health For Pet</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+		<link rel="stylesheet" href="{% static 'fonts/antonio/stylesheet.css' %}">
+		<link rel="stylesheet" href="{% static 'fonts/titilium/stylesheet.css' %}">
+	</head>
+	<body>
+		<div class="container">
+			
+			<div class="row logos">
+				<img src="{% static 'img/logo-quatro-corretora.jpg' %}" alt="Logo Quatro Corretora">
+				<img src="{% static 'img/logo-health-for-pet.jpg' %}" alt="Logo Health For Pet">
+			</div>
+			<hgroup class="row title">
+				<div class="col-xs-12">
+					<h1>Convênio Veterinário para seu Pet? Porquê?</h1>
+					<h2>Solicite uma proposta e ganhe até 30 dias grátis!</h2>
+				</div>
+			</hgroup>
+			
+			<div class="row">
+				<!-- ************** -->
+				<!-- Featured Image -->
+				<!-- ************** -->
+				<div class="col-lg-8 featured-image-wrapper">
+					<img class="featured-image responsive" src="{% static 'img/cachorro-no-telefone.jpg' %}" alt="Cachorro no telefone">
+				</div>
+
+				<!-- ********* -->
+				<!-- Lead Form -->
+				<!-- ********* -->
+				<div class="col-lg-4 lead-form-wrapper">
+					<form action="" class="lead-form">
+						<nav>
+							<ul class="row">
+								<li class="col-md-6">
+									<mark>1</mark>
+									Dados Pessoais
+								</li>
+								<li class="col-md-6">
+									<mark class="n2">2</mark>
+									Seu Pet
+								</li>
+							</ul>
+						</nav>
+						<div class="form-group">
+							<p>This is the introduction to the form and what's it for.</p>
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="text" placeholder="Nome Completo">
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="text" placeholder="E-mail">
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="text" placeholder="CPF">
+						</div>
+						<div class="form-group">
+							<div class="phone">
+									<input class="form-control area-code" type="text" placeholder="DDD">
+									<input class="form-control phone-number" type="text" placeholder="Celular">
+							</div>
+						</div>
+						<div class="form-group">
+							<select name="" id="" class="form-control">
+								<option value="0">Melhor horário</option>
+								<option value="1">De 9h até 12h</option>
+								<option value="2">De 12h até 14h</option>
+								<option value="3">De 14h até 18h</option>
+								<option value="4">De 18h até 21h</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="submit" value="Solicitar Proposta">
+							<p class="sub">Válido somente para SP e RJ</p>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- ************* -->
+		<!-- Main Features -->
+		<!-- ************* -->
+		<div class="main-features">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 comercial-contact">
+						<p class="featured">
+							Receba um contato comercial<br>
+							<strong>hoje mesmo!</strong>
+						</p>
+					</div>
+					<div class="col-lg-3 first-month-free">
+						<img src="{% static 'img/primeiro-mes-gratis.jpg' %}" alt="Primeiro mês grátis e consulta veterinária gratuita em casa" class="responsive">
+					</div>
+					<div class="col-lg-3 online-proposal-wrapper">
+						<div class="online-proposal">
+							Preencha<br>
+							proposta<br>
+							<strong>online</strong>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<!-- ************ -->
+		<!-- Plan Details -->
+		<!-- ************ -->
+		<div class="container plan-details">
+			<hgroup class="row">
+				<div class="col-xs-12">
+					<h1>Conheça os planos <strong>Health for Pet</strong></h1>
+					<h2>Descubra tudo o que podemos oferecer para deixar seu pet ainda mais feliz e saudável</h2>
+					<hr class="dotted-spaced">
+					<h3>Plano de saúde para meu Pet? <strong>Por quê?</strong></h3>
+				</div>
+			</hgroup>
+				
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="feature">
+						<img src="{% static 'img/todos-os-dispositivos.jpg' %}" class="responsive" alt="4pet abre em todos os dispositivos">
+						<h4>Tecnologia e praticidade</h4>
+						<ul>
+							<li>Acesso imediato aos melhores prestadores de cuidados veterinários</li>
+							<li>Site responsivo, preparado para dispositivos móveis</li>
+							<li>Sistema simples, de fácil utilização, baseado na web</li>
+							<li>Implantação de microchip para registro e acompanhamento do pet</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="feature">
+						<img src="{% static 'img/cachorro-medico.jpg' %}" class="responsive" alt="Cachorro segurando equipamento médico">
+						<h4>Rede credenciada e coberturas</h4>
+						<ul>
+							<li>Clínicas, hospitais, diagnóticos e hospitais especializados</li>
+							<li>Cobertura de exames, internações e tratamentos complexos (tomografia, ressonância, oncologia, ortopedia)</li>
+							<li>Aplicação das principais vacinas</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="feature">
+						<img src="{% static 'img/gato-e-garcom.jpg' %}" class="responsive" alt="Gato e garçom">
+						<h4>Serviços exclusivos</h4>
+						<ul>
+							<li>PetPhone - serviço de atendimento com veterinários de plantão (24 horas por dia)</li>
+							<li>DigiPet - Prontuário veterinário digital</li>
+							<li>PetHome - atendimento domiciliar</li>
+							<li>Vantagens exclusivas para criadores e planos coletivos</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- ******* -->
+	<!-- SCRIPTS -->
+	<!-- ******* -->
+
+	<!-- jQuery and Bootstrap-->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'js/jquery.gritter.js' %}"></script>
+
+	<!-- Custom Javascript -->
+	<script type="text/javascript">
+	$("#contactForm").on("submit", function(event){
+	    event.preventDefault();
+	    $.post("/send-message/",
+	        {
+	            csrfmiddlewaretoken: '{{ csrf_token }}',
+	            name: $("#name").val(),
+	            email: $("#email").val(),
+	            phone: $("#phone").val(),
+	            message: $("#message").val()
+	        },
+	        function(response){
+	            if(response.success == 1){
+	                $.gritter.add({
+	                    title: 'Sua mensagem foi enviada com sucesso. Muito obrigado!',
+	                    time: '2000'
+	                });
+	                $("#name").val('');
+	                $("#email").val('');
+	                $("#phone").val('');
+	                $("#message").val('');
+	            }
+
+	        }
+	    )
+	});
+	</script>
+	</body>
+</html>

@@ -1,0 +1,267 @@
+body {
+	background: #fff url('../img/grad.jpg') repeat-x;
+}
+
+ul {
+	padding: 0;
+}
+
+img.responsive {
+	max-width: 100%;
+	height: auto;
+}
+
+/*
+ * Header and Upper part
+ * ********************* */
+.logos {
+	text-align: center;
+}
+
+hgroup.title {
+	margin-bottom: 20px;
+}
+
+	hgroup.title h1 {
+		font-family: 'antonio';
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: center;
+		color: #6d6e71;
+		margin: 50px 0 0 0;
+	}
+
+	hgroup.title h2 {
+		text-align: center;
+		color: #adb8c7;
+		margin-top: 0;
+	  	font-size: 22px;	
+	}
+
+
+/* **************
+ * Featured Image
+ * ************** */
+
+@media(min-width: 1170px) {
+	.featured-image-wrapper {
+		margin-right: -70px;
+	}
+}
+
+.featured-image {
+	
+}
+
+/* *********
+ * Lead Form
+ * ********* */
+
+.lead-form-wrapper {
+	background: #03c2eb;
+	padding: 0 30px;
+	border-radius: 4px;
+}
+
+	.lead-form {
+	}
+
+	.lead-form p {
+		color: #fff;
+		font-size: 20px;
+	}
+
+	.lead-form p.sub {
+		font-size: 12px;
+		text-align: center;
+		margin-top: 10px;
+	}
+
+	.lead-form nav {
+		margin: 0 -15px;
+	}
+
+	.lead-form nav ul {
+		background: #006ab4;
+		border-top-right-radius: 4px;
+		border-top-left-radius: 4px;
+	}
+
+	.lead-form nav ul li {
+		color: #fff;
+		font-family: 'antonio';
+		text-transform: uppercase;
+		font-size: 18px;
+		padding: 15px;
+	}
+
+	.lead-form nav ul li mark {
+		background-color: transparent;
+		color: #fff;
+		border-radius: 100px;
+		border: 1px solid #fff;
+		padding: 7px 15px;
+		font-size: 22px;
+	}
+
+		.lead-form nav ul li mark.n2 {
+			padding: 7px 13px;
+		}
+	
+	.lead-form .form-group {
+		margin-bottom: 10px;
+	}
+
+	.lead-form .form-control {
+		height: 50px;
+		font-size: 18px;
+		box-shadow: 0px 2px 1px #ddd inset;
+		border-bottom: 1px solid #4d859b;
+	}
+
+	.lead-form .phone input {
+		display: inline;
+	}
+
+	.lead-form .phone .area-code {
+		width: 20%;
+	}
+
+	.lead-form .phone .phone-number {
+		width: 75.5%;
+		margin-left: 3%;
+	}
+
+	.lead-form input[type=submit] {
+		background-color: #136baf;
+		border: 1px solid #0c3e7d;
+		border-radius: 4px;
+		color: #fff;
+		text-shadow: 1px 1px #0c3e7d;
+		text-transform: uppercase;
+		font-size: 18px;
+		box-shadow: 0 1px #6293d2 inset;
+		padding: 11px 0;
+	}
+
+/* *************
+ * Main Features
+ * ************* */
+.main-features {
+	background: #006eb5;
+	color: #fff;
+	padding: 30px 0;
+}
+
+.main-features p.featured {
+	font-family: 'antonio';
+	text-transform: uppercase;
+	font-size: 40px;
+	text-align: center;
+	line-height: 50px;
+	margin-top: 25px;
+}
+
+.main-features p.featured strong {
+	font-size: 65px;
+	line-height: 65px;
+}
+
+.main-features .comercial-contact {
+
+}
+
+.main-features .first-month-free {
+	text-align: center;
+}
+
+.main-features .online-proposal-wrapper {
+	text-align: center;
+}
+
+.main-features .online-proposal {
+	background: #53c2e8;
+	border-radius: 4px;
+	font-family: 'titilium';
+	text-transform: uppercase;
+	font-size: 27px;
+	padding: 20px;
+	line-height: 27px;
+	display: inline-block;
+	margin-top: 7px;
+}
+
+.main-features .online-proposal strong {
+	font-size: 40px;
+	line-height: 33px;
+}
+
+.plan-details h1 {
+	font-family: 'titilium';
+	color: #4ec1ea;
+	text-align: center;
+	margin: 60px 0 8px 0;
+}
+
+/* ************
+ * Plan Details
+ * ************ */
+
+.plan-details h2 {
+	font-family: 'titilium';
+	color: #4ec1ea;
+	text-align: center;
+	font-size: 26px;
+	margin-top: 0;
+	padding-bottom: 10px;
+}
+
+.plan-details hr.dotted-spaced {
+	height: 1px;
+	width: 100%;
+	color: transparent;
+	border: none;
+	background-image: linear-gradient(to right, #ff667d 30%, rgba(255, 255, 255, 0) 0%);
+	background-position: top;
+	background-size: 7px 1px;
+	background-repeat: repeat-x;
+}
+
+.plan-details h3 {
+	font-size: 26px;
+	color: #c0b1ac;
+	text-align: center;
+	font-family: 'titilium';
+	margin: 40px 0;
+}
+
+/*
+ * Plan Details > Features
+ * *********************** */
+
+.plan-details .feature {
+	border: 1px solid #ddd;
+	min-height: 430px;
+	margin-bottom: 30px;
+}
+
+.plan-details .feature img {}
+
+.plan-details .feature h4 {
+		background-color: #4ec1ea;
+		color: #fff;
+		font-family: 'titilium';
+		padding: 10px;
+		text-align: center;
+		font-size: 24px;
+}
+
+.plan-details .feature ul {
+	margin-left: 30px;
+	list-style-image: url('../img/pink-list-bullet.jpg');
+	font-family: 'titilium';
+}
+
+.plan-details .feature ul li {
+	margin-right: 10px;
+}
