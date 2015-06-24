@@ -33,16 +33,12 @@
 				<!-- Lead Form -->
 				<!-- ********* -->
 				<div class="col-lg-4 lead-form-wrapper">
-					<form action="" class="lead-form">
+					<form action="/send-message/" class="lead-form" method="POST">
+						{% csrf_token %}
 						<nav>
 							<ul class="row">
-								<li class="col-md-6">
-									<mark>1</mark>
-									Dados Pessoais
-								</li>
-								<li class="col-md-6">
-									<mark class="n2">2</mark>
-									Seu Pet
+								<li class="col-xs-12 text-center">
+									Solicite uma proposta agora mesmo
 								</li>
 							</ul>
 						</nav>
@@ -50,23 +46,24 @@
 							<p>This is the introduction to the form and what's it for.</p>
 						</div>
 						<div class="form-group">
-							<input class="form-control" type="text" placeholder="Nome Completo">
+							<input class="form-control" type="text" name="name" placeholder="Nome Completo" required data-validation-required-message="Campo obrigatório">
 						</div>
 						<div class="form-group">
-							<input class="form-control" type="text" placeholder="E-mail">
+							<input class="form-control" type="email" name="email" placeholder="E-mail" required>
+							<p class="help-block"></p>
 						</div>
 						<div class="form-group">
-							<input class="form-control" type="text" placeholder="CPF">
+							<input class="form-control" type="text" name="cpf" placeholder="CPF" maxlength="11" required>
 						</div>
 						<div class="form-group">
 							<div class="phone">
-									<input class="form-control area-code" type="text" placeholder="DDD">
-									<input class="form-control phone-number" type="text" placeholder="Celular">
+									<input class="form-control area-code" name="ddd" type="text" maxlength="2" placeholder="DDD" required>
+									<input class="form-control phone-number" name="phone" type="text" maxlength="9" placeholder="Celular" required>
 							</div>
 						</div>
 						<div class="form-group">
-							<select name="" id="" class="form-control">
-								<option value="0">Melhor horário</option>
+							<select name="period" class="form-control" required>
+								<option value="" disabled selected>Melhor horário</option>
 								<option value="1">De 9h até 12h</option>
 								<option value="2">De 12h até 14h</option>
 								<option value="3">De 14h até 18h</option>
@@ -163,6 +160,10 @@
 			</div>
 		</div>
 
+		<footer class="container text-center">
+			Powered by <strong>MPG</strong> - Media Planning Group - <a target="_blank" href="http://www.mediaplanning.com.br">www.mediaplanning.com.br</a>
+		</footer>
+
 	<!-- ******* -->
 	<!-- SCRIPTS -->
 	<!-- ******* -->
@@ -171,11 +172,16 @@
     <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
-    <!-- Plugin JavaScript -->
+    <!-- JavaScript Plugins -->
     <script src="{% static 'js/jquery.gritter.js' %}"></script>
+    <script src="{% static 'js/jqBootstrapValidation.min.js' %}"></script>
 
 	<!-- Custom Javascript -->
+	<script src="{% static 'js/main.js' %}"></script>	
 	<script type="text/javascript">
+
+	$(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
+	
 	$("#contactForm").on("submit", function(event){
 	    event.preventDefault();
 	    $.post("/send-message/",

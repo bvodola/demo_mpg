@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.mail import EmailMessage
 from django.http import JsonResponse
 
@@ -6,27 +6,29 @@ from django.http import JsonResponse
 def index(request):
 	return render(request,'lpage/index.html')
 
+def confirm(request):
+	return render(request,'lpage/confirm.html')
+
 def send_message(request):
 
 	# Fetch the attributes from the POST request
 	name = request.POST.get('name')
 	email = request.POST.get('email')
+	cpf = request.POST.get('cpf')
+	ddd = request.POST.get('ddd')
 	phone = request.POST.get('phone')
-	# if hasattr(request.POST, 'message'):
-	message = request.POST.get('message')
-	# else:
-	# 	message = '(Nenhuma mensagem)'
+	period = request.POST.get('period')
 
-	# Define Reply-To Header
+	Define Reply-To Header
 	headers = {'Reply-To': email}
 
 	message = EmailMessage(
-			'[MPG] Formulário de Contato', 
-			'Nome: '+name+"\n"+'Telefone: '+phone+"\n"+'Email: '+email+"\n"+'Mensagem: '+message,
+			'[4pet] Solicitação de Proposta', 
+			'Nome: '+name+"\n"+'Telefone: ('+ddd+') '+phone+"\n"+'Email: '+email+"\n"+'CPF: '+cpf+"\n"+'Melhor horário:'+period,
 			'contato@mediaplanning.com.br',
             ['contato@mediaplanning.com.br'],
             headers = headers
         )
 
 	success = message.send()
-	return JsonResponse({"success": success})
+	return redirect('/confirm', success=success)
