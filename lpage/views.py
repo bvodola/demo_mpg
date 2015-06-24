@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.core.mail import EmailMessage
+from django.core.mail import EmailMessage, send_mail
 from django.http import JsonResponse
 
 # Create your views here.
@@ -10,7 +10,6 @@ def confirm(request):
 	return render(request,'lpage/confirm.html')
 
 def send_message(request):
-
 	# Fetch the attributes from the POST request
 	name = request.POST.get('name')
 	email = request.POST.get('email')
@@ -19,16 +18,16 @@ def send_message(request):
 	phone = request.POST.get('phone')
 	period = request.POST.get('period')
 
-	Define Reply-To Header
+	#Define Reply-To Header
 	headers = {'Reply-To': email}
 
 	message = EmailMessage(
-			'[4pet] Solicitação de Proposta', 
-			'Nome: '+name+"\n"+'Telefone: ('+ddd+') '+phone+"\n"+'Email: '+email+"\n"+'CPF: '+cpf+"\n"+'Melhor horário:'+period,
-			'contato@mediaplanning.com.br',
-            ['contato@mediaplanning.com.br'],
-            headers = headers
-        )
+		'[4pet] Solicitação de Proposta',
+		'Mensagem',
+		'contato@mediaplanning.com.br',
+		['contato@mediaplanning.com.br'],
+		headers = headers
+	)
 
 	success = message.send()
 	return redirect('/confirm', success=success)

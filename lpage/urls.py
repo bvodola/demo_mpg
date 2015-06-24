@@ -4,5 +4,5 @@ from lpage import views
 urlpatterns = patterns('',
 	url(r'^send-message/', views.send_message),
 	url(r'^4pet', views.index),
-	url(r'^confirm', views.confirm, name='confirm'),
+	url(r'^confirm', views.confirm),
 )
